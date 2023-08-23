@@ -6,12 +6,12 @@ public class Factorial {
 //  12 throw an IllegalArgumentException (Java).
     public int factorial(int n) {
         if (n < 0 || n > 12) throw new IllegalArgumentException();
-
-        int result = 1;
-
-        for (int i = n; i > 0; i--) {
-            result *= i;
-        }
-        return result;
+        return n <= 1 ? 1 : n * factorial(n - 1);
+//        int result = 1;
+//
+//        for (int i = n; i > 0; i--) {
+//            result *= i;
+//        }
+//        return result;
     }
 }
