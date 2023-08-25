@@ -32,6 +32,5 @@ public class StringIncrementer {
         }
 
         return result.toString();
-
     }
 }

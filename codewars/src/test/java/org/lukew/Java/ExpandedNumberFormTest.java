@@ -12,4 +12,6 @@ class ExpandedNumberFormTest {
         assertEquals("70000 + 300 + 4", ExpandedNumberForm.expandedForm(70304));
     }
 
+
+
 }
