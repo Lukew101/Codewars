@@ -8,23 +8,16 @@ public class YourOrderPlease {
 //    This number is the position the word should have in the result.
 
     public static String order(String words) {
-        Map<Integer, String> map = new TreeMap<>();
         StringBuilder result = new StringBuilder();
         String[] arr = words.split(" ");
 
-        for (String a: arr) {
-            for (char c: a.toCharArray()) {
-                if (Character.isDigit(c)) {
-                    map.put((int) c, a);
-                    break;
+        for (int i = 0; i < 10; i++) {
+            for (String c: arr) {
+                if (c.contains(String.valueOf(i))) {
+                    result.append(c).append(" ");
                 }
             }
         }
-
-        for (Map.Entry<Integer, String> entry : map.entrySet()) {
-            result.append(entry.getValue()).append(" ");
-        }
-
         return result.toString().trim();
     }
 }
