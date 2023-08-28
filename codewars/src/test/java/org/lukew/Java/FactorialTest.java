@@ -24,5 +24,4 @@ class FactorialTest {
     public void test_factorial5() {
         assertEquals(120, fact.factorial(5));
     }
-
 }
